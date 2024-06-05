@@ -17,7 +17,9 @@ function ShoppingList({ items }) {
 
   return (
     <div className="ShoppingList">
-      <Filter onCategoryChange={handleCategoryChange}/>
+      <div className="Filter">
+        <Filter onCategoryChange={handleCategoryChange}/>
+      </div>
       <ul className="Items">
         {itemsToDisplay.map((item) => (
           <Item key={item.id} name={item.name} category={item.category} />
